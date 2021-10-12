@@ -1,0 +1,76 @@
+
+.review{
+    .review__name1 {
+      margin: 0rem auto;
+      font-weight: bold;
+      font-size: 2.5rem;
+      .line__name1{
+      border-bottom: 3px solid white  ; 
+      opacity: 15%;
+      margin: 2rem auto;
+      }
+    }
+    .container{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 1400px;
+      flex-wrap:wrap ;
+      z-index: 1;
+      
+      .card{
+        position: relative;
+        width: 28rem;
+        height: 36rem;
+        margin: 30px;
+        box-shadow: 2rem 2rem 5rem #1a1a1a;
+        border-radius: 15px;
+        background-color: #2a2a2a;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid rgba(255,255,255,0.5);
+        border-left: 1px solid rgba(255,255,255,0.5);
+        backdrop-filter: blur(5px);
+        .review__content{
+          padding: 20px;
+          text-align: center;
+          transition: 0.5s;
+          .review__number{
+            position: absolute;
+            top: -40px;
+            right: 00px;
+            font-size: 12em;
+            color: rgba(255,255,255,0.05);
+            pointer-events: none;
+          }
+          .review__text{
+            font-size: 1.4rem;
+            color: #fff;
+            z-index: 1;
+            margin-bottom: 2rem;
+          }
+          .review__user{
+            display: block;
+            margin: 0 auto;;
+            height: 8rem;
+            width: 8rem;              
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          .review_name{
+            padding: 1rem 0;
+            font-size: 2rem;
+            color: #fff;
+          }
+          .review__star{
+            padding: 1.5rem;
+            color: #ffa400;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }

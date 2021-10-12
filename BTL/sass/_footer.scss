@@ -1,0 +1,23 @@
+.footer {
+    &__container {
+      @include flex(flex-start, space-between);
+      padding-top: 3rem;
+      background-color: #1a1a1a;
+      border-radius: 15px;
+    }
+    &__item {
+      width: 25%;
+      .fa{
+        color: #ffc87a;
+        margin-right: 1rem;
+      }
+    }
+    &__link {
+      color: $text-color;
+      font-size: 1.4rem;
+      display: block;
+      margin-bottom: 3rem;
+      width: fit-content;
+    }
+  }
+  

@@ -1,0 +1,162 @@
+.header {
+  position: fixed;
+    padding-top: 3rem;
+    z-index: 1000;
+    background-color: #161616 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    &__inner {
+      @include flex(center, space-between);
+    }
+    &__menu {
+      margin-left: 10rem;
+      &-list {
+        @include flex(center);
+      }
+      &-item {
+        margin-left: 5rem;
+        &:last-child {
+          margin-left: 7rem;
+        }
+      }
+      &-link {
+        font-size: 1.7rem;
+        color: $text-color;
+        transition: color 0.25s linear, border 0.25s linear;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+    .icons {
+      margin-left: 16rem;
+    }
+    .icons div{ 
+      font-size: 2.5rem;
+      margin-left: 1.7rem;
+      cursor: pointer;
+      color: #fff;
+      &:hover{
+        color: $primary-color;
+      }
+    }
+    .search-form{
+      position: absolute;
+      top: -115%; right: 2rem;
+      width: 50rem;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      height: 5rem;
+      background-color: #1a1a1a;
+
+      &.active{
+        top: 115%;
+      }
+
+      input{
+        border-radius: 1rem;
+        height: 100%;
+        width: 100%;
+        padding: 0 1.2rem;
+        font-size: 1.6rem;
+        color: #fff;
+        text-transform: none;
+        background-color: #1a1a1a;
+      }
+
+      label{
+        font-size: 2.4rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        cursor: pointer;
+        color: #fff;
+        &:hover{
+        color: $primary-color;
+        }
+      }
+    }
+
+    .shopping-card{
+      position: absolute;
+      top: 115%; right: -105%;
+      background: #1a1a1a;
+      border-radius: 0.5rem;
+      width: 35rem;
+      padding: 2rem;
+      &.active{
+        right: 2rem;
+        transition: 0.4s linear;
+      }
+      .box{
+        display: flex;
+        align-items: center;
+        gap: 1.5;
+        margin-bottom: 1.5rem;
+        position: relative;
+        .fa-times{
+          opacity: 80%;
+          position: absolute;
+          top: 50%; right: 2rem;
+          transform: translateY(-50%);
+          font-size: 2rem;
+          color: #fff;
+          cursor: pointer;
+          &:hover{
+            color: $primary-color;
+            }
+        }
+        img{
+          height: 10rem;
+          width: 10rem;
+          border-radius: 0.5rem;
+        }
+        .content{
+          margin-left: 2rem;
+          h3{
+            font-size: 1.7rem;
+            padding-bottom: 0.5rem;
+            color: $primary-color;
+            font-weight: bold;
+          }
+          span{
+            opacity: 75%;
+            font-size: 1.4rem;
+            color: #fff;
+            &.multiply{
+              margin: 0 .5rem;
+            }
+          }
+        }
+      }
+      .total{
+        opacity: 90%;
+        color: #fff;
+        text-align: center;
+        font-size: 2.2rem;
+
+        span{
+          color: #fff;
+        }
+      }
+      .btn--rounded{
+        margin-top: 1rem;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+  .logo {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: $text-color;
+    &__text {
+      color: $primary-color;
+    }
+  }
+
+  #menu-btn{
+    display: none;
+  }
