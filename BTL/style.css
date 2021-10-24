@@ -48,6 +48,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 2rem 9%;
+  width: 100%;
 }
 .header__inner {
   display: flex;
@@ -62,9 +63,7 @@ body {
 .header__menu-list {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  flex-direction: row;
+  justify-content: center;
 }
 .header__menu-item {
   margin-left: 5rem;
@@ -105,6 +104,7 @@ body {
 }
 .header .search-form.active {
   top: 115%;
+  transition: 0.2s linear;
 }
 .header .search-form input {
   border-radius: 1rem;
@@ -194,6 +194,66 @@ body {
   margin-top: 1rem;
   text-align: center;
   width: 100%;
+}
+.header .login-form {
+  position: absolute;
+  top: 115%;
+  right: -105%;
+  background: #1a1a1a;
+  border-radius: 1rem;
+  width: 35rem;
+  padding: 2rem;
+}
+.header .login-form.active {
+  right: 2rem;
+  transition: 0.4s linear;
+}
+.header .login-form h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+.header .login-form .box {
+  margin: 0.7rem 0;
+  border: #161616;
+  padding: 1rem 1.2rem;
+  font-size: 1.5rem;
+  color: #2a2a2a;
+  text-transform: none;
+  width: 100%;
+  opacity: 95%;
+}
+.header .login-form .remember {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.7rem 0;
+  margin-bottom: 1.6rem;
+}
+.header .login-form .remember label {
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+.header .login-form .btn--rounded {
+  margin-top: 1rem 0;
+  text-align: center;
+  width: 100%;
+}
+.header .login-form p {
+  color: #fff;
+  padding-top: 0.7rem;
+  font-size: 1.4rem;
+}
+.header .login-form p a {
+  margin-left: 0.7rem;
+  color: #ffc87a;
+}
+.header .login-form p a:hover {
+  text-decoration: underline;
 }
 
 .logo {
@@ -652,6 +712,9 @@ body {
   font-family: "Poppins";
   font-weight: bold;
 }
+.subscribe__button:hover {
+  color: #ffc87a;
+}
 .subscribe__social i {
   margin-left: 4rem;
   font-size: 2rem;
@@ -684,20 +747,25 @@ body {
   margin-bottom: 3rem;
   width: fit-content;
 }
-
-@media screen and (max-width: 1366px) {
-  .banner .test__image {
-    display: none;
-  }
+.footer__link:hover {
+  padding-left: 1rem;
 }
-@media screen and (min-width: 1366px) {
+
+@media screen and (min-width: 768px) {
   .banner .test1__image {
     display: none;
   }
 }
+@media screen and (max-width: 1366px) {
+  .header .icons {
+    margin-left: 5rem;
+  }
+  .header .header__menu .header__menu-item {
+    margin-left: 2rem;
+  }
+}
 @media screen and (max-width: 1023px) {
   .banner {
-    padding-top: 5rem;
     object-fit: contain;
   }
 
@@ -747,10 +815,6 @@ body {
   }
 }
 @media screen and (max-width: 767px) {
-  .header__menu {
-    display: none;
-  }
-
   .banner .test__image {
     display: none;
   }
@@ -826,6 +890,77 @@ body {
   }
   .banner__buttons > .btn {
     font-size: 1.2rem;
+  }
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+}
+@media (max-width: 1024px) {
+  #menu-btn {
+    display: inline-block;
+  }
+
+  .header {
+    width: 100%;
+  }
+  .header .search-form {
+    width: 100%;
+    right: 0;
+    border-radius: 0;
+  }
+  .header .search-form.active {
+    top: 99%;
+  }
+  .header .icons {
+    margin-left: 40rem;
+  }
+  .header .header__menu {
+    margin-left: 0rem;
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #1a1a1a;
+    border-top: #1a1a1a;
+    border-bottom: #1a1a1a;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .header__menu.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .header__menu a {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background: #1a1a1a;
+    font-size: 2rem;
+    display: block;
+    border-radius: 0.5rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 50%;
+  }
+
+  .header .icons {
+    margin-left: 5rem;
+  }
+  .header .icons div {
+    margin-left: 1rem;
+  }
+  .header .header__menu-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header .header__menu a {
+    margin: 1rem;
+    padding: 1.5rem;
   }
 }
 

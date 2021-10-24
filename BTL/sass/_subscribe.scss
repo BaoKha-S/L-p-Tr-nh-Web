@@ -44,6 +44,9 @@
       font-size: 1.6rem;
       font-family: "Poppins";
       font-weight: bold;
+      &:hover {
+        color: $primary-color;
+      }
     }
     &__social i {
       margin-left: 4rem;
